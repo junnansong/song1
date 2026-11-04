@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>钢琴社招新 - 欢迎加入</title>
+    <style>
+        /* 基础样式与返回顶部 */
+        body { font-family: "Microsoft YaHei", sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f4f4f4; }
+        .container { width: 80%; margin: auto; overflow: hidden; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        /* 导航栏样式 */
+        .nav { text-align: center; background: #333; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; }
+        .nav a:hover { color: #ffd700; }
+        
+        /* 音乐播放器绝对定位到左上角 */
+        .music-player { position: fixed; top: 10px; left: 10px; z-index: 200; }
+
+        /* 各个板块的样式与边距 */
+        section { margin-bottom: 50px; padding-top: 80px; border-bottom: 2px dashed #ccc; }
+        h2 { color: #333; text-align: center; }
+
+        /* 表格样式 */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #007BFF; color: white; }
+
+        /* 表单样式 */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: inline-block; width: 150px; text-align: right; margin-right: 20px; }
+        .form-group input[type="text"], .form-group textarea, .form-group select { width: 50%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        .submit-btn { text-align: center; margin-top: 20px; }
+        .submit-btn input { padding: 10px 20px; margin: 0 10px; cursor: pointer; }
+
+        /* 一键返回按钮 */
+        .back-to-top { display: block; width: 100px; margin: 20px auto; padding: 10px; text-align: center; background: #007BFF; color: white; text-decoration: none; border-radius: 5px; }
+        .back-to-top:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 左上角背景音乐 -->
+    <div class="music-player">
+        <audio controls loop>
+            <source src="bgm.mp3" type="audio/mpeg">
+            你的浏览器不支持音频播放。
+        </audio>
+    </div>
+
+    <!-- 2. 页面内跳转导航 -->
+    <div class="nav" id="top">
+        <a href="#intro">社团简介</a>
+        <a href="#schedule">活动安排</a>
+        <a href="#gallery">风采展示</a>
+        <a href="#stories">社员故事</a>
+        <a href="#signup">在线报名</a>
+    </div>
+
+    <div class="container">
+        <!-- 社团简介 -->
+        <section id="intro">
+            <h2>钢琴社简介</h2>
+            <p>钢琴社成立于2010年，是本校最具影响力的音乐社团之一。我们致力于为所有热爱钢琴、热爱音乐的同学提供一个交流、学习和展示的平台。无论你是零基础的小白，还是拥有十级证书的大佬，只要你对黑白琴键充满热情，这里就是你的家。*(此处需要你自己用文心一言生成超过1000字的扩写内容)*</p>
+            <a href="#top" class="back-to-top">返回顶部</a>
+        </section>
+
+        <!-- 3. 活动安排 (复杂表格) -->
+        <section id="schedule">
+            <h2>钢琴社2026年春季学期活动安排表</h2>
+            <table>
+                <!-- 第一行：跨4列 -->
+                <tr>
+                    <th colspan="4" style="font-size: 20px; background-color: #2c3e50;">钢琴社2026年春季学期活动安排表</th>
+                </tr>
+                <!-- 第二行：居中 -->
+                <tr style="background-color: #ecf0f1;">
+                    <th style="text-align: center; color: #333;">时间</th>
+                    <th style="text-align: center; color: #333;">活动名称</th>
+                    <th style="text-align: center; color: #333;">活动地点</th>
+                    <th style="text-align: center; color: #333;">负责人</th>
+                </tr>
+                <tr>
+                    <td>第1周</td>
+                    <td>新成员见面会</td>
+                    <td rowspan="2">艺术楼 302 琴房</td> <!-- 跨行：同一间教室 -->
+                    <td>张社长</td>
+                </tr>
+                <tr>
+                    <td>第2周</td>
+                    <td>钢琴基础教学公开课</td>
+                    <!-- 这里省去了地点，因为上面用了 rowspan -->
+                    <td>李部长</td>
+                </tr>
+                <tr>
+                    <td>第5周</td>
+                    <td>春季汇报演出彩排</td>
+                    <td>大礼堂</td>
+                    <td>王同学</td>
+                </tr>
+            </table>
+            <a href="#top" class="back-to-top">返回顶部</a>
+        </section>
+
+        <!-- 4. 风采展示 (点击图片跳转并插入视频) -->
+        <section id="gallery">
+            <h2>风采展示</h2>
+            <p style="text-align: center;">（点击下方图片可以查看社团详细介绍）</p>
+            <!-- 点击图片跳转到 club_intro.html -->
+            <div style="text-align: center;">
+                <a href="club_intro.html" target="_blank">
+                    <img src="photo.jpg" alt="日常演奏照片" style="width: 60%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                </a>
+            </div>
+            
+            <h3 style="text-align: center; margin-top: 30px;">社团活动视频</h3>
+            <!-- 5. embed导入 mp4 视频 -->
+            <div style="text-align: center;">
+                <embed src="video.mp4" width="600" height="400" type="video/mp4">
+            </div>
+            <a href="#top" class="back-to-top">返回顶部</a>
+        </section>
+
+        <!-- 6. 社员故事 -->
+        <section id="stories">
+            <h2>社员故事（节选）</h2>
+            <p>记得大一刚加入社团时，我还是个连五线谱都要数着认的萌新。是学长手把手教我指法，陪我度过了一个又一个枯燥的练琴夜晚。去年，我终于在迎新晚会上独奏了一曲《致爱丽丝》，当台下掌声响起的那一刻，我热泪盈眶……*(此处需要你自己用文心一言生成超过1000字的扩写内容)*</p>
+            <a href="#top" class="back-to-top">返回顶部</a>
+        </section>
+
+        <!-- 7. 在线报名表 (表单放进table里) -->
+        <section id="signup">
+            <h2>钢琴社在线报名表</h2>
+            <form action="#" method="get">
+                <table>
+                    <tr>
+                        <td width="20%" align="right"><label>姓名：</label></td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>性别：</label></td>
+                        <td>
+                            <input type="radio" name="gender" value="male" checked> 男
+                            <input type="radio" name="gender" value="female"> 女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>出生日期（年月日）：</label></td>
+                        <td>
+                            <input type="text" name="year" placeholder="年" size="6"> 
+                            <input type="text" name="month" placeholder="月" size="4"> 
+                            <input type="text" name="day" placeholder="日" size="4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>手机号码：</label></td>
+                        <td><input type="text" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>电子邮箱：</label></td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>是否有钢琴基础：</label></td>
+                        <td>
+                            <input type="radio" name="base" value="yes"> 有
+                            <input type="radio" name="base" value="no" checked> 无
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>兴趣方向：</label></td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="classic"> 古典乐
+                            <input type="checkbox" name="hobby" value="pop"> 流行乐
+                            <input type="checkbox" name="hobby" value="jazz"> 爵士乐
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>年级：</label></td>
+                        <td>
+                            <select name="grade">
+                                <option value="freshman">大一</option>
+                                <option value="sophomore">大二</option>
+                                <option value="junior">大三</option>
+                                <option value="senior">大四</option>
+                                <option value="graduate">研究生</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top"><label>自我介绍：</label></td>
+                        <td>
+                            <textarea name="intro" rows="5" cols="50" placeholder="请简单介绍自己、以及加入吉他社的理由……"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>是否服从活动安排：</label></td>
+                        <td>
+                            <input type="radio" name="obey" value="yes" checked> 是
+                            <input type="radio" name="obey" value="no"> 否
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="提交报名">
+                            <input type="reset" value="重置信息">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <a href="#top" class="back-to-top">返回顶部</a>
+        </section>
+    </div>
+</body>
+</html>
